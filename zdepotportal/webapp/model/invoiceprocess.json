@@ -1,0 +1,123 @@
+{
+	"invoiceprocessSet": [
+        {
+            
+            "DocDate": "09.03.2023",
+            "OrderNo": "#256",
+            "OrderType": "Standard Order",
+            "PayType": "Ex Works",
+            "Customer": "18100010",
+            "CustomerName": "Domestic Customer IN 10 Kandivli 400101 Mumbai",
+            "Segment": "",
+            "Material": "TG11",
+            "Description": "Trad.Good 11,PD,Reg.Trading",
+            "District": ", Mumbai",
+            "Destination": "",
+            "TotalOrderQty": "3",
+            "DeliveredQty": "0",
+            "CumScheduledPendingQty": "3.000",
+            "PendingDeliveryQty": "3",
+            "PGIQty": "0",
+            "FreightRSPMT": "0",
+            "CreatedTime": "5:30 AM"
+            
+        },
+        {
+            
+            "DocDate": "09.03.2023",
+            "OrderNo": "#257",
+            "OrderType": "Standard Order",
+            "PayType": "Ex Works",
+            "Customer": "18100010",
+            "CustomerName": "Domestic Customer IN 10 Kandivli 400101 Mumbai",
+            "Segment": "",
+            "Material": "TG11",
+            "Description": "Trad.Good 11,PD,Reg.Trading",
+            "District": ", Mumbai",
+            "Destination": "",
+            "TotalOrderQty": "3",
+            "DeliveredQty": "0",
+            "CumScheduledPendingQty": "3.000",
+            "Pending Delivery Qty": "3",
+            "PGIQty": "0",
+            "FreightRSPMT": "0",
+            "CreatedTime": "5:30 AM"
+            
+            
+        },
+        {
+            
+            "DocDate": "09.03.2023",
+            "OrderNo": "#258",
+            "OrderType": "Standard Order",
+            "PayType": "Ex Works",
+            "Customer": "18100010",
+            "CustomerName": "Domestic Customer IN 10 Kandivli 400101 Mumbai",
+            "Segment": "MaterialGroup5-1",
+            "Material": "TG11",
+            "Description": "Trad.Good 11,PD,Reg.Trading",
+            "District": ", Mumbai",
+            "Destination":"",
+            "TotalOrderQty": "3",
+            "DeliveredQty": "0",
+            "CumScheduledPendingQty": "3.000",
+            "PendingDeliveryQty": "3",
+            "PGIQty": "0",
+            "FreightRSPMT": "0",
+            "CreatedTime": "5:30 AM"
+            
+            
+        },
+            {
+            
+            "DocDate": "09.03.2023",
+            "OrderNo": "#259",
+            "OrderType": "Standard Order",
+            "PayType": "Ex Works",
+            "Customer": "18100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION Kandivli 400101 Mumbai",
+            "Segment": "MaterialGroup5-1",
+            "Material": "300142",
+            "Description": "CEMENT TEST 2",
+            "District": ", Mumbai",
+            "Destination": "",
+            "TotalOrderQty": "3",
+            "DeliveredQty": "0",
+            "CumScheduledPendingQty": "3.000",
+            "PendingDeliveryQty": "3",
+            "PGIQty": "0",
+            "FreightRSPMT": "0",
+            "CreatedTime": "5:30 AM"
+            
+            
+        },
+        {
+            
+            "DocDate": "09.03.2023",
+            "OrderNo": "#260",
+            "OrderType": "Standard Order",
+            "PayType": "Ex Works",
+            "Customer": "18100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION Kandivli 400101 Mumbai",
+            "Segment": "MaterialGroup5-1",
+            "Material": "300142",
+            "Description": "CEMENT TEST 2",
+            "District": ", Mumbai",
+            "Destination": "",
+            "TotalOrderQty": "3",
+            "DeliveredQty": "0",
+            "CumScheduledPendingQty": "3.000",
+            "PendingDeliveryQty": "3",
+            "PGIQty": "0",
+            "FreightRSPMT": "0",
+            "CreatedTime": "5:30 AM"
+            
+            
+        }
+    ]
+
+
+
+		
+		
+}

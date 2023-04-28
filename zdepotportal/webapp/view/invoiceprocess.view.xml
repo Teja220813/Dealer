@@ -1,0 +1,164 @@
+<mvc:View controllerName="zdepotportal.controller.invoiceprocess"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:t="sap.ui.table">
+	<Page id="page" title="Invoice Process" showNavButton="true" navButtonPress="onNavBack">
+	
+		<content>
+			<HBox >
+				<VBox >
+					<Label text="Order Type"></Label>
+					<ComboBox id="id_cb_Invoiceprocess" items="{ path: 'filterData>/OrderType', sorter: { path: 'OrderTypeID' } }">
+						<core:Item key="{filterData>OrderTypeID}" text="{filterData>OrderTypeDescription}"/>
+					</ComboBox>
+				</VBox>
+				<VBox >
+					<Label text="Segment"></Label>
+					<ComboBox id="id_cb_Invoiceprocess1" items="{ path: 'filterData>/Segment', sorter: { path: 'SegmentID' } }">
+						<core:Item key="{filterData>SegmentID}" text="{filterData>SegmentDescription}"/>
+					</ComboBox>
+				</VBox>
+				<VBox >
+					<Label text="Incoterm"></Label>
+					<ComboBox id="id_cb_Invoiceprocess2" items="{ path: 'filterData>/Incoterm', sorter: { path: 'IncotermID' } }">
+						<core:Item key="{filterData>IncotermID}" text="{filterData>IncotermDescription}"/>
+					</ComboBox>
+				</VBox>
+				<VBox >
+					<Label text="Order No"></Label>
+					<Input value=""></Input>
+
+				</VBox>
+			
+				
+				
+							
+				</HBox>
+				 
+				
+			<t:Table id="id_bomTbl" rows="{ path: 'invoiceProcessData>/invoiceprocessSet', sorter: { path: 'OrderNo' } }" rowActionCount="1" rowSelectionChange="handleSelectChange" alternateRowColors="true" selectionMode="None" ariaLabelledBy="title" visibleRowCount="5" class="sapUiSizeCompact sapUiContentPadding">
+				
+				<t:columns>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="DocDate" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>DocDate}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="OrderNo" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>OrderNo}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="OrderType" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>OrderType}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="PayType" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>PayType}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="Customer" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>Customer}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="CustomerName" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>CustomerName}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="Segment" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>Segment}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="Material" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>Material}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="Description" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>Description}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="District" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>District}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="Destination" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>Destination}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="TotalOrderQty" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>TotalOrderQty}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="DeliveredQty" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>DeliveredQty}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="CumScheduledPendingQty" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>CumScheduledPendingQty}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="PendingDeliveryQty" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>PendingDeliveryQty}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="PGIQty" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>PGIQty}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="FreightRSPMT" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>FreightRSPMT}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+					<t:Column width="10%" hAlign="Center">
+						<Label text="CreatedTime" design="Bold" textAlign="Center"/>
+						<t:template>
+							<Text text="{invoiceProcessData>CreatedTime}" wrapping="false"/>
+						</t:template>
+					</t:Column>
+
+
+
+
+
+
+				</t:columns>
+			</t:Table>
+
+
+		</content>
+	</Page>
+</mvc:View>

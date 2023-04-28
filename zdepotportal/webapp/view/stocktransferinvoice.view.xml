@@ -1,0 +1,126 @@
+<mvc:View controllerName="zdepotportal.controller.stocktransferinvoice"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table">
+    <Page id="page" title="Stock Transfer Invoice Process" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <HBox >
+                <VBox >
+                    <Label text="Doc Date"></Label>
+
+                    <DatePicker id="DP1" placeholder="Enter Date"/>
+
+                </VBox>
+
+
+            </HBox>
+            <t:Table id="id_bomTbl" rows="{ path: 'stocktransferinvoiceData>/stocktransferinvoiceset', sorter: { path: 'Customer' } }" rowActionCount="1" rowSelectionChange="handleSelectChange" alternateRowColors="true" selectionMode="None" ariaLabelledBy="title" visibleRowCount="5" class="sapUiSizeCompact sapUiContentPadding">
+                <t:columns>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="ShippingPoint" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoiceData>ShippingPoint}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="Mode" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoiceData>Mode}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                     <t:Column width="10%" hAlign="Center">
+                    <Label text="District" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>District}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="PurchaseDoc" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>PurchaseDoc}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="DocDate" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>DocDate}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Customer" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>Customer}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="CustomerName" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>CustomerName}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Material" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>Material}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Description" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>Description}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Segment" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>Segment}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="DeliveredQty" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>DeliveredQty}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="PendingDeliveryQty" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>PendingDeliveryQty}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="FreightRSPMT" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>FreightRSPMT}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Destination" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>Destination}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="PayType" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>PayType}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="ValuationType" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferinvoiceData>ValuationType}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        </t:Table>
+
+
+    </content>
+</Page>
+</mvc:View>

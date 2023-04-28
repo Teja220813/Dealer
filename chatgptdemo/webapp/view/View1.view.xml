@@ -1,0 +1,23 @@
+<mvc:View controllerName="chatgptdemo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+         <VBox id="_IDGenVBox1">
+                            <HBox id="_IDGenHBox1">
+                                <Input id="idInput" width="700px" />
+                                <Button id="_IDGenButton1" text="Get Answer" press="onPressGPT" />
+                            </HBox>
+
+                            <Text id="idText" />
+                           	<CheckBox id="_IDGenCheckBox1" text="speak"  select ="onSpeak"/>
+                            	<CheckBox id="chkMute" text="mute"  select ="onMute"/>
+                                
+                           
+ 
+            </VBox>
+               
+
+        </content>
+    </Page>
+</mvc:View>

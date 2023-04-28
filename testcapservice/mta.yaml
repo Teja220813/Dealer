@@ -1,0 +1,163 @@
+_schema-version: "3.1"
+ID: testcapservice
+description: A simple CAP project.
+version: 1.0.0
+modules:
+  - name: testcapservice-srv
+    type: nodejs
+    path: gen/srv
+    requires:
+      - name: testcapservice-db
+    provides:
+      - name: srv-api
+        properties:
+          srv-url: ${default-url}
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+
+  - name: testcapservice-ui
+    type: nodejs
+    path: /
+    requires:
+      - name: testcapservice-db
+    provides:
+      - name: srv-ui
+        properties:
+          srv-url: ${default-url}
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+
+  - name: testcapservice-db-deployer
+    type: hdb
+    path: gen/srv
+    requires:
+      - name: testcapservice-db
+        properties:
+          TARGET_CONTAINER: ~{hdi-container-name}
+      - name: cross-container-service-1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: ServiceName_1
+          service: ~{the-service-name}
+    parameters:
+      buildpack: nodejs_buildpack
+  - name: testcapservice-app-content
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: testcapservice-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - referencedata.zip
+          name: referencedata
+          target-path: resources/
+        - artifacts:
+            - lovtype.zip
+          name: lovtype
+          target-path: resources/
+        - artifacts:
+            - lovvalue.zip
+          name: lovvalue
+          target-path: resources/
+        - artifacts:
+            - refdatalovtype.zip
+          name: refdatalovtype
+          target-path: resources/
+  - name: referencedata
+    type: html5
+    path: app/referencedata
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:cf
+      supported-platforms:
+        []
+  - name: lovtype
+    type: html5
+    path: app/lovtype
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:cf
+      supported-platforms:
+        []
+  - name: lovvalue
+    type: html5
+    path: app/lovvalue
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:cf
+      supported-platforms:
+        []
+  - name: refdatalovtype
+    type: html5
+    path: app/referencedata
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:cf
+      supported-platforms:
+        []
+resources:
+  - name: testcapservice-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+    properties:
+      hdi-container-name: ${service-name}
+  - name: cross-container-service-1
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: testcapservice-db
+    properties:
+      the-service-name: ${service-name}
+  - name: testcapservice-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-name: testcapservice-html5-srv
+      service-plan: app-host
+  - name: testcapservice-destination-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      config:
+        HTML5Runtime_enabled: false
+        init_data:
+          instance:
+            destinations:
+              - Authentication: NoAuthentication
+                Name: ui5
+                ProxyType: Internet
+                Type: HTTP
+                URL: https://ui5.sap.com
+            existing_destinations_policy: update
+        version: 1.0.0
+      service: destination
+      service-name: testcapservice-destination-service
+      service-plan: lite
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npx -p @sap/cds-dk cds build --production

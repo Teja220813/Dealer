@@ -1,0 +1,179 @@
+{
+	"StatusSet": [
+		{
+			"StatusID": "S001",
+			"StatusDescription": "Open"
+		},
+		{
+			"StatusID": "S002",
+			"StatusDescription": "InProcess",
+		},
+		{
+			"StatusID": "S003",
+			"StatusDescription": "Completed"
+		}
+		
+	],
+	"Segment": [
+		{
+			"SegmentID": "000",
+			"SegmentDescription": "MaterialGroup5-0"
+		},
+		{
+			"SegmentID": "001",
+			"SegmentDescription": "MaterialGroup5-1"
+		},
+		{
+			"SegmentID": "002",
+			"SegmentDescription": "MaterialGroup5-2"
+		}
+	],
+	"Mode": [
+		{
+			"ModeID": "01",
+			"ModeDescription": "Truck"
+		},
+		{
+			"ModeID": "02",
+			"ModeDescription": "Mail"
+		},
+		{
+			"ModeID": "03",
+			"ModeDescription": "Rail"
+		},
+		{
+			"ModeID": "03",
+			"ModeDescription": "Sea"
+		},
+		{
+			"ModeID": "03",
+			"ModeDescription": "Airplane"
+		}
+	],
+	"OrderType": [
+		{
+			"OrderTypeID": "ZNT",
+			"OrderTypeDescription": "Non Trade"
+		},
+		{
+			"OrderTypeID": "ZTR",
+			"OrderTypeDescription": "Trade"
+		},
+		{
+			"OrderTypeID": "OR",
+			"OrderTypeDescription": "Standard Order"
+		}
+	],
+	"Incoterm": [
+		{
+			"IncotermID": "CFR",
+			"IncotermDescription": "Cost and Freight"
+		},
+		{
+			"IncotermID": "CIF",
+			"IncotermDescription": "Costs, Insurance & Freight "
+		},
+		{
+			"IncotermID": "CIP",
+			"IncotermDescription": "Carriage and Insurance paid to"
+		}
+	],
+
+	"Billing": [
+		{
+			"BillingID": "ZST1",
+			"BillingDescription": "STO Proforma"
+		},
+		{
+			"BillingID": "ZST2",
+			"BillingDescription": "STO Invoice RM"
+		},
+		{
+			"BillingID": "ZST3",
+			"BillingDescription": "STO Invoice"
+		}
+	],
+
+	"StorageLocation": [
+		{
+			"StorageLocationID": "8004",
+			"StorageLocationDescription": "Finished Goods"
+		},
+		{
+			"StorageLocationID": "8006",
+			"StorageLocationDescription": "Dispatches"
+		},
+		{
+			"StorageLocationID": "8007",
+			"StorageLocationDescription": "Return Goods"
+		}
+	],
+
+	"Material": [
+		{
+			"MaterialID": "998830",
+			"MaterialDescription": "Test"
+		}
+	],
+	"CompanyCode": [
+		{
+			"CompanyId": "01",
+			"CompanyDescription":"3000"
+			
+		},
+		{
+			"CompanyId": "02",
+			"CompanyDescription":"3008"
+		},
+		{
+			"CompanyId": "03",
+			"CompanyDescription":"6000"
+			
+		}
+	],
+	"PurchaseOrg": [
+		{
+			"PurchaseId": "01",
+			"PurchaseDescription":"3000 mfg automative"
+			
+		},
+		{
+			"PurchaseId": "02",
+			"PurchaseDescription":"5006 mfg automative"
+		}
+		
+	],
+	"PurchaseGroup": [
+		{
+			"PurchasegroupId": "001",
+			"PurchasegroupDescription": "MIC MFg STO"
+			
+		},
+		{
+			"PurchasegroupId": "002",
+			"PurchasegroupDescription": "MIC MFg STO"
+		}
+		
+	],
+	"SupplyPlant": [
+		{
+			"SupplyPlantId": "SP01",
+			"SupplyPlantDescription": "PW01 Pw01"
+			
+		},
+		{
+			"SupplyPlantId": "SP02",
+			"SupplyPlantDescription": "8000 MFG Depot"
+		},
+		{
+			"SupplyPlantId": "SP03",
+			"SupplyPlantDescription": "1811 testplant"
+		}
+		
+		
+	]
+
+	
+	
+	
+}

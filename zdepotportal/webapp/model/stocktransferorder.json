@@ -1,0 +1,62 @@
+{
+	"stocktransferorderSet": [
+        {
+            
+            "Material": "000000000000300008",
+            "Description":"Auto_sensor_headlight",
+            "OrderQuantity": "10",
+            "UoM": "PC"
+            
+            
+        },
+        {
+            
+            
+            "Material": "TG10",
+            "Description":"Trad.Good 10,PD,Third Party",
+            "OrderQuantity": "50",
+            "UoM": "PC"
+            
+            
+        },
+        {
+            
+            
+            "Material": "TG11",
+            "Description":"Trad.Good 11,PD,Reg.Trading",
+            "OrderQuantity": "15",
+            "UoM": "PC"
+            
+            
+            
+            
+        },
+            {
+            
+           
+                "Material": "NS0002",
+                "Description":"Non-Stock Material 02",
+                "OrderQuantity": "15",
+                "UoM": "PC"
+                
+                
+            
+        },
+        {
+           
+            
+            "Material": "000000000000100103",
+            "Description":"Ketorolac Tromethamine Injection USP,30m",
+            "OrderQuantity": "25",
+            "UoM": "Kg"
+            
+            
+            
+        }
+    ]
+
+
+
+		
+		
+}

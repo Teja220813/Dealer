@@ -1,0 +1,47 @@
+<mvc:View controllerName="zdepotportal.controller.main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:layout="sap.ui.layout"
+    xmlns:tnt="sap.tnt">
+    <Page id="page" title="{i18n>title}" >
+        <content>
+        <VBox >
+        <HBox >
+         <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Goods Receipt" press=".handleGoodsReceipt">
+               
+            </GenericTile>
+            <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Invoice Process" press=".handleInvoiceProcess">
+             
+            </GenericTile>
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Invoice Report Print" press=".handleInvoiceReportPrint">
+               
+            </GenericTile>
+            <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock Transfer Order (Spo - Spo/Plant)" press=".handleStockTransferOrder">
+             
+            </GenericTile>
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock Transfer Invoice Process" press=".handleStockTransferInvoice">
+               
+            </GenericTile>
+          
+            <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock Transfer Invoice Report Print" press=".handleStockTransferInvoiceReport">
+             
+            </GenericTile>
+             <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stock Report" press=".handleStockReport">
+               
+            </GenericTile>
+              </HBox>
+              <HBox >
+            <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Stocks For Posting Date ( MB5B )" press=".handleStocksForPostingDate">
+             
+            </GenericTile>
+
+            
+            <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Register" press=".handleSalesRegister">
+             
+            </GenericTile>
+            </HBox>
+            </VBox>
+            
+           
+        </content>
+    </Page>
+</mvc:View>

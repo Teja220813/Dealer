@@ -1,0 +1,73 @@
+{
+	"stocktransferinvoicereportSet": [
+        {
+            
+            "OrderIDDate": "000000264 28/3/2023",
+            "Customer": "0018100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION 900 Kandivli 400101 Mumbai",
+            "Delivery": "0080000352",
+            "Invoice": "0090000042",
+            "CancelledInvoice": "",
+            "NetValue":  "1200"
+            
+        },
+        {
+            
+            
+            "OrderIDDate": "000000265 28/4/2023",
+            "Customer": "0018100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION 900 Kandivli 400101 Mumbai",
+            "Delivery": "0080000356",
+            "Invoice": "0090000049",
+            "CancelledInvoice": "",
+            "NetValue":  "7200"
+            
+            
+        },
+        {
+            
+            
+            "OrderIDDate": "000000266 15/3/2023",
+            "Customer": "0018100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION 900 Kandivli 400101 Mumbai",
+            "Delivery": "0080000354",
+            "Invoice": "0090000047",
+            "CancelledInvoice": "",
+            "NetValue":  "9200"
+            
+            
+            
+        },
+            {
+            
+           
+                "OrderIDDate": "000000267 24/3/2023",
+                "Customer": "0018100012",
+                "CustomerName": "HP GULERIA SALES CORPORATION 900 Kandivli 400101 Mumbai",
+                "Delivery": "0080000358",
+                "Invoice": "0090000048",
+                "CancelledInvoice": "",
+                "NetValue":  "8200"
+                
+            
+        },
+        {
+           
+            "OrderIDDate": "000000264 26/3/2023",
+            "Customer": "0018100012",
+            "CustomerName": "HP GULERIA SALES CORPORATION 900 Kandivli 400101 Mumbai",
+            "Delivery": "0080000359",
+            "Invoice": "0090000046",
+            "CancelledInvoice": "",
+            "NetValue":  "200"
+            
+            
+            
+        }
+    ]
+
+
+
+		
+		
+}

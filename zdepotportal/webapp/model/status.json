@@ -1,0 +1,17 @@
+{
+	"StatusSet": [
+		
+		{
+		"StatusID": "S001",
+		"StatusDescription": "Completed"
+	}, {
+		"StatusID": "S002",
+		"StatusDescription": "Ongoing"
+	}, {
+		"StatusID": "S003",
+		"StatusDescription": "Paused"
+	}, {
+		"StatusID": "S004",
+		"StatusDescription": "Stopped"
+	}]
+}

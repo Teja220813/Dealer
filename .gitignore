@@ -1,0 +1,9 @@
+
+# auto generated wildcard
+Referencedata/db/.env
+# auto generated wildcard
+testcapservice/db/.env
+# auto generated wildcard
+testcapservice/gen/srv/.env
+# auto generated wildcard
+lovCAP/db/.env

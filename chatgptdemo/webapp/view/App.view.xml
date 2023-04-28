@@ -1,0 +1,17 @@
+<mvc:View controllerName="chatgptdemo.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="Get Answers from ChatGPT">
+                    <content>
+                       
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+    
+</mvc:View>

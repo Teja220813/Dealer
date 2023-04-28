@@ -1,0 +1,79 @@
+<mvc:View controllerName="zdepotportal.controller.stocktransferorder"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table">
+    <Page id="page" title="Stock Transfer Order (Spo - Spo/Plant)" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <HBox >
+
+                <VBox >
+                    <Label text="Company Code"></Label>
+                    <ComboBox  items="{ path: 'filterData>/CompanyCode', sorter: { path: 'CompanyId' } }">
+                        <core:Item key="{filterData>CompanyId}" text="{filterData>CompanyDescription}"/>
+                    
+                </ComboBox>
+            </VBox>
+            <VBox >
+                <Label text="Purchase Org"></Label>
+                <ComboBox items="{ path: 'filterData>/PurchaseOrg', sorter: { path: 'PurchaseId' } }">
+                    <core:Item key="{filterData>PurchaseId}" text="{filterData>PurchaseDescription}"/>
+                </ComboBox>
+            </VBox>
+            <VBox >
+                <Label text="Purchase Group"></Label>
+                <ComboBox items="{ path: 'filterData>/PurchaseGroup', sorter: { path: 'PurchasegroupId' } }">
+                    <core:Item key="{filterData>PurchasegroupId}" text="{filterData>PurchasegroupDescription}"/>
+                </ComboBox>
+            </VBox>
+            <VBox >
+                <Label text="OrderType"></Label>
+                <ComboBox items="{ path: 'filterData>/OrderType', sorter: { path: 'OrderTypeID' } }">
+                    <core:Item key="{filterData>OrderTypeID}" text="{filterData>OrderTypeDescription}"/>
+                </ComboBox>
+            </VBox>
+            <VBox >
+                <Label text="SupplyPlant"></Label>
+                <ComboBox items="{ path: 'filterData>/SupplyPlant', sorter: { path: 'SupplyPlantId' } }">
+                    <core:Item key="{filterData>SupplyPlantId}" text="{filterData>SupplyPlantDescription}"/>
+                </ComboBox>
+            </VBox>
+
+
+        </HBox>
+        <t:Table id="id_bomTbl" rows="{ path: 'stocktransferorderData>/stocktransferorderSet', sorter: { path: 'Material' } }" rowActionCount="1" rowSelectionChange="handleSelectChange" alternateRowColors="true" selectionMode="None" ariaLabelledBy="title" visibleRowCount="5" class="sapUiSizeCompact sapUiContentPadding">
+            <t:columns>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Material" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferorderData>Material}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="Description" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferorderData>Description}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="OrderQuantity" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferorderData>OrderQuantity}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+                <t:Column width="10%" hAlign="Center">
+                    <Label text="UoM" design="Bold" textAlign="Center"/>
+                    <t:template>
+                        <Text text="{stocktransferorderData>UoM}" wrapping="false"/>
+                    </t:template>
+                </t:Column>
+
+
+            </t:columns>
+        </t:Table>
+
+
+    </content>
+</Page>
+</mvc:View>

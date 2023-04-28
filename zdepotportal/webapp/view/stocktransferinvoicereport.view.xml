@@ -1,0 +1,85 @@
+<mvc:View controllerName="zdepotportal.controller.stocktransferinvoicereport"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table">
+    <Page id="page" title="Stock Transfer Invoice Report  Print" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <HBox >
+                <VBox >
+                    <Label text="Invoice Date"></Label>
+                   
+                    <DatePicker id="DP1" placeholder="Enter Date"/>
+
+                </VBox>
+                <VBox >
+                    <Label text="Invoice"></Label>
+                    <Input value=""></Input>
+                </VBox>
+                <VBox >
+                    <Label text="Order ID"></Label>
+                    <Input value=""></Input>
+
+                </VBox>
+                <VBox >
+		<Label  text="Billing"></Label>
+			<ComboBox  items="{ path: 'filterData>/Billing', sorter: { path: 'BillingID' } }">
+				<core:Item key="{filterData>BillingID}" text="{filterData>BillingDescription}"/>
+			</ComboBox>
+			</VBox>
+
+
+            </HBox>
+            <t:Table id="id_bomTbl" rows="{ path: 'stocktransferinvoicereportData>/stocktransferinvoicereportSet', sorter: { path: 'Invoice' } }" rowActionCount="1" rowSelectionChange="handleSelectChange" alternateRowColors="true" selectionMode="None" ariaLabelledBy="title" visibleRowCount="5" class="sapUiSizeCompact sapUiContentPadding">
+                <t:columns>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="OrderID/Date" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>OrderIDDate}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="Customer" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>Customer}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="CustomerName" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>CustomerName}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="Delivery" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>Delivery}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="Invoice" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>Invoice}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="CancelledInvoice" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>CancelledInvoice}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10%" hAlign="Center">
+                        <Label text="NetValue" design="Bold" textAlign="Center"/>
+                        <t:template>
+                            <Text text="{stocktransferinvoicereportData>NetValue}" wrapping="false"/>
+                        </t:template>
+                    </t:Column>
+
+                </t:columns>
+            </t:Table>
+
+
+        </content>
+    </Page>
+</mvc:View>

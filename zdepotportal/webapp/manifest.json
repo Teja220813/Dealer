@@ -1,0 +1,284 @@
+{
+    "_version": "1.49.0",
+    "sap.app": {
+        "id": "zdepotportal",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.9.3",
+            "toolsId": "e224b420-7f05-4abc-b86b-1d255520ca3d"
+        },
+        "dataSources": {
+			
+			"status_ds": {
+				"uri": "model/status.json",
+				"type": "JSON"
+			},
+            "filters_ds":{
+                "uri": "model/filters.json",
+                "type": "JSON"
+
+
+            },
+            "invoiceprocess_ds":{
+                "uri": "model/invoiceprocess.json",
+                "type":"JSON"
+                
+            },
+            "invoicereport_ds":{
+                "uri": "model/invoicereportprint.json",
+                "type":"JSON"
+                
+            },
+            "stocktransferorder_ds":{
+                "uri": "model/stocktransferorder.json",
+                "type":"JSON"
+                
+            },
+            "stocktransferinvoice_ds":{
+                "uri": "model/stocktransferinvoice.json",
+                "type":"JSON"
+                
+            },
+            "stocktransferinvoicereport_ds":{
+                "uri": "model/stocktransferinvoicereport.json",
+                "type":"JSON"
+                
+            }
+            
+
+
+
+		},
+        "crossNavigation": {
+            "inbounds": {
+                "zdepotportal-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.112.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "zdepotportal.i18n.i18n"
+                }
+            },
+            "statusData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "status_ds"
+			},
+            "filterData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "filters_ds"
+            },
+            
+            "invoiceProcessData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "invoiceprocess_ds"
+
+            },
+            "invoicereportData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "invoicereport_ds"
+
+            },
+            "stocktransferorderData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "stocktransferorder_ds"
+
+            },
+            "stocktransferinvoiceData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "stocktransferinvoice_ds"
+
+            },
+            "stocktransferinvoicereportData":{
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "stocktransferinvoicereport_ds"
+
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "zdepotportal.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "Routemain",
+                    "pattern": ":?query:",
+                    "target": [
+                        "Targetmain"
+                    ]
+                },
+             
+                {
+                    "name": "goodsreceipt",
+                    "pattern": "goodsreceipt",
+                    "target": [
+                        "goodsreceipt"
+                    ]
+                },
+                
+                {
+                    "name": "invoiceprocess",
+                    "pattern": "invoiceprocess",
+                    "target": [
+                        "invoiceprocess"
+                    ]
+                },
+                {
+                    "name": "invoicereportprint",
+                    "pattern": "invoicereportprint",
+                    "target": [
+                        "invoicereportprint"
+                    ]
+                },
+                {
+                    "name": "stocktransferorder",
+                    "pattern": "stocktransferorder",
+                    "target": [
+                        "stocktransferorder"
+                    ]
+                },
+                {
+                "name": "stocktransferinvoice",
+                "pattern": "stocktransferinvoice",
+                "target": [
+                    "stocktransferinvoice"
+                ]
+            },
+            {
+                "name": "stocktransferinvoicereport",
+                "pattern": "stocktransferinvoicereport",
+                "target": [
+                    "stocktransferinvoicereport"
+                ]
+            }
+            ],
+            "targets": {
+                "Targetmain": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "main",
+                    "viewName": "main"
+                },
+                "goodsreceipt": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "goodsreceipt",
+                    "viewName": "goodsreceipt"
+                },
+                "invoiceprocess": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "invoiceprocess",
+                    "viewName": "invoiceprocess"
+                },
+                "invoicereportprint": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "invoicereportprint",
+                    "viewName": "invoicereportprint"
+                },
+                "stocktransferorder": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "stocktransferorder",
+                    "viewName": "stocktransferorder"
+                },
+                "stocktransferinvoice": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "stocktransferinvoice",
+                    "viewName": "stocktransferinvoice"
+                },
+                "stocktransferinvoicereport": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "stocktransferinvoicereport",
+                    "viewName": "stocktransferinvoicereport"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "zdepotportal.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "zdepotportal"
+    }
+}

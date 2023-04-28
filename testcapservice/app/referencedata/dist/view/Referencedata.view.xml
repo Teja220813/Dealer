@@ -1,0 +1,130 @@
+<mvc:View controllerName="referencedata.controller.Referencedata"
+xmlns:core="sap.ui.core" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+        
+				
+        <IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+        
+			<IconTabFilter  key="info" text="LOV Type">
+            <HBox >
+            <VBox >
+            <Label text="Name"/>
+               <ComboBox
+				items="{
+					path: '/LovType'
+					
+				}">
+				<core:Item key="{Id}" text="{Name}" />
+			</ComboBox>
+            
+            </VBox>
+            <VBox >
+            <Label text="Active"/>
+               <ComboBox
+				items="{
+					path: '/LovType'
+					
+				}">
+				<core:Item key="{Id}" text="{Active}" />
+			</ComboBox>
+            </VBox>
+            <VBox >
+                    <Label text="Id"></Label>
+                    <Input value=""></Input>
+                </VBox>
+                <VBox >
+                    <Label text="Description"></Label>
+                    <Input value=""></Input>
+                </VBox>
+                <VBox >
+            <Label text="Category"/>
+               <ComboBox
+				items="{
+					path: '/LovType'
+					
+				}">
+				<core:Item key="{Id}" text="{Category}" />
+			</ComboBox>
+            </VBox>
+
+
+
+            </HBox>
+            
+				
+<Table items="{/LovType}" id="table0" mode="SingleSelectLeft" selectionChange="onSelect">
+                          
+                            <items>
+                                <ColumnListItem type="Active" id="item0">
+                                    <cells>
+                                        <Text id="id1" text="{Id}"/>
+                                        <Text id="id2" text="{Name}"/>
+                                        <Text id="id3" text="{Active}"/>
+                                        <Text id="id4" text="{Description}"/>
+                                        <Text id="id5" text="{Category}"/>
+                                        
+                                        
+                                        
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                            <columns>
+                                <Column>
+                                    <header>
+                                        <Label text="Id" />
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="Name" />
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="Active" />
+                                    </header>
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="Description" />
+                                    </header>
+                                </Column>
+                               
+                               <Column>
+                                    <header>
+                                        <Label text="Category" />
+                                    </header>
+                                </Column>
+                                
+                               
+                               
+                                    
+                            </columns>
+                        </Table>
+                    
+
+
+			
+        
+			</IconTabFilter>
+
+            <IconTabFilter  key="info" text="LOV Value">
+				<Text text="Info content goes here ..." />
+			</IconTabFilter>
+			
+		</items>
+	</IconTabBar>
+
+
+        </content>
+    </Page>
+</mvc:View>
